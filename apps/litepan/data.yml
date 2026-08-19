@@ -17,9 +17,9 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  website: https://www.litepan.top/
-  github: https://www.litepan.top/
-  document: https://www.litepan.top/
+  website: https://www.litepan.top
+  github: https://www.litepan.top
+  document: https://www.litepan.top
   architectures:
     - amd64
     - arm64

@@ -1,2 +1,10 @@
 additionalProperties:
-  formFields: []
+  formFields:
+    - default: "5211"
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      type: number
+      labelEn: Port
+      labelZh: 端口
+      edit: true
+      rule: paramPort
