@@ -1,0 +1,27 @@
+services:
+  litepan:
+    image: ponphil/litepan:beta
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5211
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /root/app/litepango/data:/app/data
+      - /root/app/litepango/strm:/app/strm
+      - /root/app/litepango/mounts:/app/mounts:shared
+    devices:
+      - /dev/fuse:/dev/fuse
+    pid: host
+    privileged: true
+    extra_hosts:
+      - api.themoviedb.org:3.170.103.4
+      - image.tmdb.org:143.244.60.193
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true

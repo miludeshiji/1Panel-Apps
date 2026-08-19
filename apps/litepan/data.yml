@@ -1,0 +1,25 @@
+name: litepan
+tags:
+  - 实用工具
+  - 云存储
+title: 把分散的网盘，收成一条影音工作流
+description:
+  en: 把分散的网盘，收成一条影音工作流
+  zh: 把分散的网盘，收成一条影音工作流
+additionalProperties:
+  key: litepan
+  name: litepan
+  tags:
+    - Tool
+    - Storage
+  shortDescZh: 把分散的网盘，收成一条影音工作流
+  shortDescEn: 把分散的网盘，收成一条影音工作流
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.litepan.top/
+  github: https://www.litepan.top/
+  document: https://www.litepan.top/
+  architectures:
+    - amd64
+    - arm64
