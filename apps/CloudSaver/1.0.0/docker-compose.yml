@@ -5,8 +5,8 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8008
     volumes:
-      - /your/local/path/data:/app/data
-      - /your/local/path/config:/app/config
+      - /root/app/CloudSaver/data:/app/data
+      - /root/app/CloudSaver/config:/app/config
     restart: unless-stopped
     networks:
       - 1panel-network
