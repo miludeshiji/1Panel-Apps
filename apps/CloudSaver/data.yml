@@ -1,0 +1,25 @@
+name: CloudSaver
+tags:
+  - 实用工具
+  - 云存储
+title: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具，支持响应式布局，移动端与PC完美适配，可通过 Docker 一键部署。
+description:
+  en: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具，支持响应式布局，移动端与PC完美适配，可通过 Docker 一键部署。
+  zh: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具，支持响应式布局，移动端与PC完美适配，可通过 Docker 一键部署。
+additionalProperties:
+  key: CloudSaver
+  name: CloudSaver
+  tags:
+    - Tool
+    - Storage
+  shortDescZh: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具，支持响应式布局，移动端与PC完美适配，可通过 Docker 一键部署。
+  shortDescEn: 一个基于 Vue 3 + Express 的网盘资源搜索与转存工具，支持响应式布局，移动端与PC完美适配，可通过 Docker 一键部署。
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/jiangrui1994/CloudSaver
+  github: https://github.com/jiangrui1994/CloudSaver
+  document: https://github.com/jiangrui1994/CloudSaver
+  architectures:
+    - amd64
+    - arm64

@@ -1,0 +1,17 @@
+services:
+  cloudsaver:
+    image: jiangrui1994/cloudsaver:latest
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8008
+    volumes:
+      - /your/local/path/data:/app/data
+      - /your/local/path/config:/app/config
+    restart: unless-stopped
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
