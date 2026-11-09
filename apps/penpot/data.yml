@@ -1,0 +1,23 @@
+name: Penpot
+tags:
+  - 实用工具
+title: 开源设计与原型协作平台
+description:
+  en: Open-source design and prototyping platform for product teams.
+  zh: 面向产品团队的开源设计与原型协作平台，支持矢量设计、交互原型和实时协作。
+additionalProperties:
+  key: penpot
+  name: Penpot
+  tags:
+    - Tool
+  shortDescZh: 开源设计与原型协作平台
+  shortDescEn: Open-source design and prototyping platform
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://penpot.app
+  github: https://github.com/penpot/penpot
+  document: https://help.penpot.app/technical-guide/getting-started/docker/
+  architectures:
+    - amd64
+    - arm64

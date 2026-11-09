@@ -1,0 +1,107 @@
+additionalProperties:
+  formFields:
+    - default: "9001"
+      envKey: PANEL_APP_PORT_HTTP
+      required: true
+      type: number
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      edit: true
+      rule: paramPort
+    - default: ""
+      envKey: PENPOT_PUBLIC_URI
+      required: true
+      type: text
+      labelEn: Public URL
+      labelZh: 访问地址
+      edit: true
+      helperEn: "Full browser URL, such as http://192.168.1.100:9001 or https://penpot.example.com. Update this value when changing the port or domain."
+      helperZh: "填写浏览器实际访问的完整地址，例如 http://192.168.1.100:9001 或 https://penpot.example.com；修改端口或域名后需同步更新。"
+    - default: ""
+      envKey: PENPOT_DATABASE_PASSWORD
+      random: true
+      required: true
+      type: password
+      labelEn: Database Password
+      labelZh: 数据库密码
+      edit: false
+      helperEn: Keep this password unchanged when reusing the database volume.
+      helperZh: 使用已有数据库卷时，请保持此密码不变。
+    - default: ""
+      envKey: PENPOT_SECRET_KEY
+      required: true
+      type: password
+      labelEn: Secret Key
+      labelZh: 应用密钥
+      edit: false
+      helperEn: Generate a random key as described in the app README. Keep the same key during upgrades.
+      helperZh: 请按应用说明生成随机密钥；升级时保持不变。
+    - default: disable-email-verification enable-prepl-server disable-secure-session-cookies enable-mcp enable-admin-console
+      envKey: PENPOT_FLAGS
+      required: true
+      type: text
+      labelEn: Feature Flags
+      labelZh: 功能开关
+      edit: true
+      helperEn: "Space-separated flags. For HTTPS, remove disable-secure-session-cookies. To send email, configure SMTP below and add enable-smtp."
+      helperZh: "多个开关以空格分隔。使用 HTTPS 时移除 disable-secure-session-cookies；发送邮件需配置下方 SMTP 并添加 enable-smtp。"
+    - default: ""
+      envKey: PENPOT_SMTP_HOST
+      required: false
+      type: text
+      labelEn: SMTP Host (optional)
+      labelZh: SMTP 服务器（可选）
+      edit: true
+    - default: "587"
+      envKey: PENPOT_SMTP_PORT
+      required: true
+      type: number
+      labelEn: SMTP Port
+      labelZh: SMTP 端口
+      edit: true
+      rule: paramPort
+    - default: ""
+      envKey: PENPOT_SMTP_USERNAME
+      required: false
+      type: text
+      labelEn: SMTP Username
+      labelZh: SMTP 用户名
+      edit: true
+    - default: ""
+      envKey: PENPOT_SMTP_PASSWORD
+      required: false
+      type: password
+      labelEn: SMTP Password
+      labelZh: SMTP 密码
+      edit: true
+    - default: no-reply@example.com
+      envKey: PENPOT_SMTP_DEFAULT_FROM
+      required: true
+      type: text
+      labelEn: Sender Email
+      labelZh: 发件人邮箱
+      edit: true
+    - default: "true"
+      envKey: PENPOT_SMTP_TLS
+      required: true
+      type: select
+      labelEn: SMTP STARTTLS
+      labelZh: SMTP STARTTLS
+      edit: true
+      values:
+        - label: "true"
+          value: "true"
+        - label: "false"
+          value: "false"
+    - default: "false"
+      envKey: PENPOT_SMTP_SSL
+      required: true
+      type: select
+      labelEn: SMTP SSL
+      labelZh: SMTP SSL
+      edit: true
+      values:
+        - label: "false"
+          value: "false"
+        - label: "true"
+          value: "true"
